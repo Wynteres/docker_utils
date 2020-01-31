@@ -16,6 +16,7 @@ services:
       
   pgadmin:
     image: dpage/pgadmin4
+    container_name: docker-local-postgres-admin
     environment:
       PGADMIN_DEFAULT_EMAIL: "raul.coan@locaweb.com.br"
       PGADMIN_DEFAULT_PASSWORD: "pgadmin"
