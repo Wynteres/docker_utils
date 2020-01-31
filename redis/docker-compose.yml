@@ -3,12 +3,12 @@ version: '3'
 services:
   redis:
     image: redis:2.8
-    container_name: recipes-manager_redis
+    container_name: docker-local-redis
     volumes:
       - /home/docker/database/PostgreSQL:/var/lib/postgresql/data
     networks:
       - docker-local-network
 
-  networks: 
-    docker-local-network:
-      driver: bridge
+networks: 
+  docker-local-network:
+    driver: bridge

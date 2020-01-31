@@ -3,13 +3,14 @@ version: '3'
 services:
   postgresSQL:
     image: postgres:9.3.20-alpine
+    container_name: docker-local-postgres
     environment:
-      POSTGRES_PASSWORD: "postgres"
-      POSTGRES_USER: "postgres"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=
     ports:
       - "5432:5432"
     volumes:
-      - /home/docker/database/PostgreSQL:/var/lib/postgresql/data
+      - /var/lib/postgresql/data
     networks:
       - docker-local-network
       
